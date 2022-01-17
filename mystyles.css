@@ -1,0 +1,164 @@
+* {
+	/* Outline to view layout on screen while styling | Remove after styling */
+	/* 	outline: 0.0625rem dashed #000; */
+
+	/* include rules for specific web page below this line */
+	margin: 0;
+	padding: 0;
+	scroll-behavior: smooth;
+}
+
+html {
+	box-sizing: border-box;
+	font-size: 100%;
+}
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap");
+/* font-family: 'Crimson Text', serif; */
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans&display=swap");
+/* font-family: 'Work Sans', sans-serif; */
+
+body {
+	width: 100%;
+	max-width: 75em;
+	margin: 0 auto;
+	background-color: #f0f8ff;
+	font-family: "Work Sans", sans-serif;
+	color: #333;
+}
+
+/* Begin HEADER */
+.banner {
+	/* photo(as background) by mymind on Unsplash */
+	background: url(https://images.unsplash.com/photo-1604077350837-c7f82f28653f?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fGNvbG9yfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60)
+		center;
+	background-size: cover;
+	padding: 4em 2em;
+
+	/* h1 grid style */
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
+	align-items: center;
+	color: #fff;
+}
+.banner h1 {
+	font-family: "Crimson Text", serif;
+	font-size: 4rem;
+	padding-bottom: 0.5em;
+}
+.banner article p {
+	font-size: 1.5rem;
+}
+.banner article a {
+	padding: 1em;
+	margin-top: 0.75em;
+	text-transform: uppercase;
+	background-color: #1db9c3;
+	color: #fff;
+	text-decoration: none;
+	border-radius: 0.25em;
+	text-align: center;
+	display: inline-block;
+	transition-property: all 0.5s;
+}
+.banner article a:hover {
+	opacity: 0.85;
+}
+/* End HEADER */
+
+/* Begin CONTAINER */
+.container {
+	padding: 2em;
+	min-width: 25em;
+}
+
+/* Begin NAV BAR */
+.header-nav {
+	width: 100%;
+}
+nav {
+	text-transform: uppercase;
+}
+nav ul {
+	list-style: none;
+	margin-top: 0;
+	margin-right: 0;
+	margin-bottom: 2em;
+	margin-left: 0;
+	padding: 0;
+	display: flex;
+	flex-wrap: wrap;
+}
+nav ul li {
+	flex: 1 1 auto;
+	text-align: center;
+}
+nav ul li a {
+	color: #333;
+	text-decoration: none;
+}
+nav ul li a:hover {
+	color: #1db9c3;
+}
+/* End NAV BAR */
+
+h2 {
+	font-family: "Crimson Text", serif;
+	font-size: 3rem;
+	color: #1db9c3;
+	margin-bottom: 0.25em;
+}
+
+/* Begin GRID */
+.grid {
+	display: grid;
+	grid-gap: 1.25em;
+	grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+	grid-template-rows: repeat(5, minmax(10em, 1fr));
+	grid-auto-flow: dense;
+	justify-content: center;
+}
+.grid-item {
+	background-color: #fff;
+	justify-self: stretch;
+}
+/* force the images to stay in their cards */
+.grid-item img {
+	object-fit: cover;
+	width: 100%;
+	max-width: 100%;
+	height: 100%;
+	border-radius: 0.3em;
+	box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 1);
+}
+
+/* Begin VARIED COMBO */
+.twobytwo {
+	grid-column: span 2;
+	grid-row: span 2;
+}
+.onebytwo {
+	grid-column: span 1;
+	grid-row: span 2;
+}
+.twobyone {
+	grid-column: span 2;
+	grid-row: span 1;
+}
+/* End VARIED COMBO */
+/* End GRID */
+/* End CONTAINER */
+
+/* FOOTER */
+footer {
+	background-color: #333;
+	padding: 0.75em;
+	color: white;
+	text-align: center;
+	font-size: 0.75rem;
+}
